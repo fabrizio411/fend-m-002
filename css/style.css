@@ -1,0 +1,139 @@
+html, body {
+    box-sizing: border-box;
+    margin: 0;
+    height: 100%;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: hsl(30, 38%, 92%);
+}
+
+p {
+    margin: 0;
+}
+
+h1 {
+    margin: 15px 0;
+}
+
+main {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.container {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    display: flex;
+    max-width: calc(100% - 40px);
+}
+
+.content {
+    margin: 40px;
+}
+
+.category, .text {
+    color: hsl(228, 12%, 48%);
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.title, .price {
+    font-family: 'Fraunces', serif;
+}
+
+
+
+.title {
+    color: hsl(212, 21%, 14%);
+}
+
+.category {
+    text-transform: uppercase;    
+}
+
+.button {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.price {
+    margin: 20px 0 15px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: hsl(158, 36%, 37%);
+    font-weight: bold;
+}
+
+.price-new {
+    font-size: 35px;
+}
+
+.price-old {
+    color: hsl(228, 12%, 48%);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    text-decoration: line-through;
+}
+
+.button {
+    width: 100%;
+    padding: 15px 0;
+    border-radius: 8px;
+    border: none;
+    background-color: hsl(158, 36%, 37%);
+    color: white;
+    font-weight: bold;
+}
+
+.button:active {
+    background-color: hsl(158, 36%, 24%);
+}
+
+
+
+@media screen and (max-width: 650px) {
+    #img {
+        content: url(../images/image-product-mobile.jpg);
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .container {
+        flex-direction: column;
+        margin: 40px 20px;
+    }
+}
+
+
+@media screen and (min-width: 651px) {
+    #img {
+        content: url(../images/image-product-desktop.jpg);
+        height: 100%;
+        width: 300px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    .container {
+        flex-direction: row;
+        width: 600px;
+        
+        height: 450px;
+    }
+
+    .content {
+        height: calc(100% - 80px)
+    }
+
+}
